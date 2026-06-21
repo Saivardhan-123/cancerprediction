@@ -1,3 +1,60 @@
-<h1>
-    Hello World
-</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Breast Cancer Prediction</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="login">
+    <h1>Breast Cancer Prediction (ML Model)</h1>
+
+    <!-- Input Form -->
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="mean_radius" placeholder="mean radius" required /><br>
+      <input type="text" name="mean_texture" placeholder="mean texture" required /><br>
+      <input type="text" name="mean_perimeter" placeholder="mean perimeter" required /><br>
+      <input type="text" name="mean_area" placeholder="mean area" required /><br>
+      <input type="text" name="mean_smoothness" placeholder="mean smoothness" required /><br>
+      <input type="text" name="mean_compactness" placeholder="mean compactness" required /><br>
+      <input type="text" name="mean_concavity" placeholder="mean concavity" required /><br>
+      <input type="text" name="mean_concave_points" placeholder="mean concave points" required /><br>
+      <input type="text" name="mean_symmetry" placeholder="mean symmetry" required /><br>
+      <input type="text" name="mean_fractal_dimension" placeholder="mean fractal dimension" required /><br>
+      <input type="text" name="radius_error" placeholder="radius error" required /><br>
+      <input type="text" name="texture_error" placeholder="texture error" required /><br>
+      <input type="text" name="perimeter_error" placeholder="perimeter error" required /><br>
+      <input type="text" name="area_error" placeholder="area error" required /><br>
+      <input type="text" name="smoothness_error" placeholder="smoothness error" required /><br>
+      <input type="text" name="compactness_error" placeholder="compactness error" required /><br>
+      <input type="text" name="concavity_error" placeholder="concavity error" required /><br>
+      <input type="text" name="concave_points_error" placeholder="concave points error" required /><br>
+      <input type="text" name="symmetry_error" placeholder="symmetry error" required /><br>
+      <input type="text" name="fractal_dimension_error" placeholder="fractal dimension error" required /><br>
+      <input type="text" name="worst_radius" placeholder="worst radius" required /><br>
+      <input type="text" name="worst_texture" placeholder="worst texture" required /><br>
+      <input type="text" name="worst_perimeter" placeholder="worst perimeter" required /><br>
+      <input type="text" name="worst_area" placeholder="worst area" required /><br>
+      <input type="text" name="worst_smoothness" placeholder="worst smoothness" required /><br>
+      <input type="text" name="worst_compactness" placeholder="worst compactness" required /><br>
+      <input type="text" name="worst_concavity" placeholder="worst concavity" required /><br>
+      <input type="text" name="worst_concave_points" placeholder="worst concave points" required /><br>
+      <input type="text" name="worst_symmetry" placeholder="worst symmetry" required /><br>
+      <input type="text" name="worst_fractal_dimension" placeholder="worst fractal dimension" required /><br>
+
+      <br>
+      <button type="submit">Predict</button>
+    </form>
+
+    <br><br>
+    <h2>{{ prediction_text }}</h2>
+
+  </div>
+
+</body>
+</html>
