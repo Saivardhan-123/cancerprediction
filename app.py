@@ -28,7 +28,10 @@ def predict():
     final_input = scalar.transform(np.array(data).reshape(1,-1))
     print(final_input)
     output = regmodel.predict(final_input)[0]
-    return render_template("home.html",prediction_text = "The caner rate is {}".format(output))
+    if output <= 0:
+        return render_template("home.html",prediction_text = "you had cancer")
+    else:
+        return render_template("home.html",prediction_text = "you do not have cancer")
 
 
     
